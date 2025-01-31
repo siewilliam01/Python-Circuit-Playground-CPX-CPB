@@ -13,7 +13,13 @@ while True:
     angle = math.atan2(-y, -x)
     angle = 180 + angle*180/(math.pi)
     magnitude = math.sqrt(x**2+y**2)
-    print(angle, magnitude)
+    
+    angle = int(angle/36)
+    cp.pixels[angle] = (5*magnitude, 0, 0)
+    for i in range(10):
+        if(i != angle):
+            cp.pixels[i] = (0, 0, 0)            
 
+    print(angle, magnitude)
     time.sleep(0.01)
 
