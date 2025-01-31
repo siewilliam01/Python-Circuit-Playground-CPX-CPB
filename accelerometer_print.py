@@ -11,10 +11,11 @@ while True:
     x, y, z = int(x), int(y), int(z)
     x, y, z = x/data_smoothing_scale, y/data_smoothing_scale, z/data_smoothing_scale
     angle = math.atan2(-y, -x)
-    angle = 180 + angle*180/(math.pi)
+    angle = 270 + angle*180/(math.pi)
     magnitude = math.sqrt(x**2+y**2)
     
     angle = int(angle/36)
+    angle = angle % 10
     cp.pixels[angle] = (5*magnitude, 0, 0)
     for i in range(10):
         if(i != angle):
