@@ -4,7 +4,7 @@ from adafruit_circuitplayground import cp
 
 while True:
     x, y, z = cp.acceleration
-    x, y, z = float(x), float(y), float(z)
+    x, y = float(x), float(y)
     
     angle = math.atan2(-y, -x)
     angle = angle*180/(math.pi)
