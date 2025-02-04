@@ -7,9 +7,8 @@ while True:
     x, y = float(x), float(y)
     
     angle = math.atan2(-y, -x)
-    angle = angle*180/(math.pi)
-    angle = int((270+angle)/36)
-    angle = angle % 10
+    angle = 270+angle*180/(math.pi)
+    angle = int((angle)/36) % 10
     
     magnitude = math.sqrt(x**2+y**2)
         
