@@ -18,6 +18,4 @@ while True:
     for i in range(10):
         if(i != angle):
             cp.pixels[i] = (0, 0, 0)
-            
-    time.sleep(0.01)
-
+    
