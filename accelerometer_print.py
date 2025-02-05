@@ -7,12 +7,13 @@ while True:
     x, y = float(x), float(y)
     
     angle = math.atan2(-y, -x)
-    angle = 270+angle*180/(math.pi)
-    angle = int((angle)/36) % 10
+    angle = (270+angle*180/(math.pi)) % 360
+    print(angle)
+    angle = int((angle)/36)
     
     magnitude = math.sqrt(x**2+y**2)
         
-    cp.pixels[angle] = (5*magnitude, 0, 0)
+    cp.pixels[angle] = (3*magnitude, 0, 0)
     
     for i in range(10):
         if(i != angle):
